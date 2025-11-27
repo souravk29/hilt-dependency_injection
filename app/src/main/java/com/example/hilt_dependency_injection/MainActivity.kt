@@ -1,5 +1,12 @@
 package com.example.hilt_dependency_injection
 
 fun main(){
-    println(Car().drive())
+
+    val engine = Engine()
+
+    val car = Car(engine)
+
+    car.drive()
+
+
 }
