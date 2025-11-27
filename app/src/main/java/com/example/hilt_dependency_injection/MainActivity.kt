@@ -21,21 +21,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-
-            helloWish()
-
-
+            
         }
     }
-}
-
-@Composable
-fun helloWish(){
-    Text(
-        text = "Hello",
-        modifier = Modifier.fillMaxSize(),
-        color = Color.Magenta,
-        30.sp,
-
-        )
 }
