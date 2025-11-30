@@ -1,18 +1,27 @@
 package com.example.hilt_dependency_injection
 
-class Car( private val engine: Engine ) {
+import javax.inject.Inject
 
-    /*
 
-    dependency is created in class => for every other class we will have to create
-    dependency (val engine) to use it, its not most reliable way
+// dependent on engine
 
-    private val engine = Engine()          -> it's a dependency, "engine" depends on "Engine()"
-
-    */
+class Car @Inject constructor( private val engine: Engine ) {
 
     fun drive(){
         println(engine.start())
     }
 
 }
+
+
+
+
+
+/*
+
+  dependency is created in class => for every other class we will have to create
+  dependency (val engine) to use it, its not most reliable way
+
+  private val engine = Engine()          -> it's a dependency, "engine" depends on "Engine()"
+
+  */
