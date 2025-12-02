@@ -23,6 +23,10 @@ object AppModule {
     }
 
 
+    fun provideCar(engine : Engine): Car{
+        return Car(engine)
+    }
+
 
 
 
@@ -30,11 +34,13 @@ object AppModule {
 
 /*
 
-@Provides : tells hilt how to provide an object, methods annotated with 'provides' returns the object that will be injected
-            'provides' is used in module where you cant use inject on the constructor. eg. third party modules
+@Provides : tells hilt how to provide an object, methods annotated with 'provides' returns the object that will be injected.
+            'provides' is used in module where you cant use inject on the constructor. eg. third party modules.
 
-@Singleton : ensures that hilt provides the single instance of the dependency across the entire application. its annotated object lives
-             for the entire lifetime of the application and can be reused.
+@Singleton : ensures that hilt creates a single instance of the dependency across the entire application. Singleton annotated object lives
+             for the entire lifetime of the application and can be reused wherever ot is needed.
+
+             Without singleton, a new instance of car would be created everytime it is requested
 
 
 */

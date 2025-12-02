@@ -2,12 +2,17 @@ package com.example.hilt_dependency_injection
 
 fun main(){
 
-    val engine = Engine()
 
-    val car = Car(engine)
+    /*
 
-    car.drive()
+    Hilt/Dagger  generates the DaggerAppComponent class at  compile-time
 
+    */
+
+
+
+   val appComponent: AppComponent =
+            DaggerAppComponent.create()                         // generates java folder in app
 
 }
 
