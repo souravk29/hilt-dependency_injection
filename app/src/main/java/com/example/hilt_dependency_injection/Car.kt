@@ -5,6 +5,8 @@ import javax.inject.Inject
 
 // dependent on engine
 
+// dependency is passed from outside the class, and hilt handles injecting it
+
 class Car @Inject constructor( private val engine: Engine ) {
 
     fun drive(){

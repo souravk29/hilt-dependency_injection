@@ -2,7 +2,7 @@ package com.example.hilt_dependency_injection
 
 import javax.inject.Inject
 
-// dependency
+// dependency/dependecy class
 
 class Engine @Inject constructor() {
 
